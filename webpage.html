@@ -23,7 +23,7 @@
       p {
         color: darkslategrey;
       }
-      #three-options {
+      .three-options {
         line-height: 2em;
       }
       a {
@@ -38,15 +38,16 @@
     <p>
       Out of the three statements listed below, one of them is a
       <em>lie</em>. Click on the incorrect statement to win.
+   <div id="first-rounds">
     </p>
-    <ol id="three-options">
+    <ol class="three-options">
       <a href="incorrectpage.html"
         ><li>When I first moved to Australia I lived in Tasmania</li></a
       >
       <a href="incorrectpage.html"
         ><li>My favourite show is Attack on Titan</li></a
       >
-      <a href="correctpage.html"><li>I am an enfp</li></a>
+      <a href="correctpage1.html"><li>I am an enfp</li></a>
       <!-- i am actually an entj-->
     </ol>
     <iframe
@@ -61,31 +62,78 @@
         href="https://giphy.com/gifs/theoffice-the-office-tv-whistleblower-KnrMjMUsuIs2tjdU9o"
       ></a>
     </p>
-    <h3>let me know how you went!</h3>
+  </div>
+  <div id="second-round">
+  </p>
+  <ol class="three-options">
+    <a href="correctpage2.html"><li>i have broken my arm before</li></a>
+    <a href="incorrectpage.html"
+      ><li>my favourite band is BTS</li></a
+    >
+    <a href="incorrectpage.html"
+      ><li>i like timtams</li></a
+    >
+  </ol>
+  <iframe src="https://giphy.com/embed/YRdBZ4CDweTozHWxh0"  height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-YRdBZ4CDweTozHWxh0"></a></p>
+</div>
+<div id="third-round">
+</p>
+<ol class="three-options">
+  <a href="incorrectpage.html"
+    ><li>i am an aries</li></a
+  >
+  <a href="correctpage3.html"><li>i have watched the matrix</li></a>
+  <a href="incorrectpage.html"
+    ><li>i met bindi irwin</li></a
+  >
+</ol>
+<iframe src="https://giphy.com/embed/d16r4hrG8zqXU2m8ls" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-the-office-tv-manager-and-salesman-d16r4hrG8zqXU2m8ls"></a></p></div>
+   
+    <h3>how many did you get correct?</h3>
 
-    <form>
-      <label for="correct">
+    <form action="results.html" method="GET">
+      <label for="none">
         <input
-          id="correct"
-          value="correct"
+          id="none"
+          value="none"
           type="radio"
-          name="correct-incorrect"
-        />correct
+          name="correct-answers"
+        />none
       </label>
 
-      <label for="incorrect">
+      <label for="one">
         <input
-          id="incorrect"
-          value="incorrect"
+          id="one"
+          value="one"
           type="radio"
-          name="correct-incorrect"
-        />incorrect
+          name="correct-answers"
+        />one
       </label>
-    </form>
-
-    <form action="results.html">
-      <input type="text" required placeholder="any feedback?" />
-      <button type="submit">submit</button>
+      <label for="two">
+        <input
+          id="two"
+          value="two"
+          type="radio"
+          name="correct-answers"
+        />two
+      </label>
+      <label for="three">
+        <input
+          id="three"
+          value="three"
+          type="radio"
+          name="correct-answers"
+        />three
+      </label>
+      <br />
+      <input
+        type="text"
+        id="results"
+        name="feedback"
+        required
+        placeholder="any feedback?"
+      />
+      <button type="submit" id="submit">submit</button>
     </form>
   </body>
 </html>
